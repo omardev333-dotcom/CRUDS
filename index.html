@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Free Product Management System built with HTML CSS and JavaScript. Create, update, delete and search products easily.">
+
+<meta name="keywords"
+content="CRUD, Product Management, JavaScript Project, HTML CSS JS">
+
+<meta name="author" content="OMAR ALAA">
+
+<meta property="og:title" content="CRUD Product Management System">
+<meta property="og:description" content="Manage products with create update delete operations">
+<meta property="og:image" content="preview.png">
+<meta property="og:type" content="website">
+  
+  <link rel="stylesheet" href="style.css"/>
+  <title>CRUDS</title>
+</head>
+<body>
+  <div class="CRUD"> 
+    <div class="head">
+      <h2>cruds</h2>
+      <p class="p">PRODUCT MANAGEMET SYSTEM</p>
+    </div>
+    
+    <div class="input">
+      <input placeholder="title" type="text" id="title"> 
+      
+      <div class="price">
+        <input onkeyup='gettotal()' type="number" id="price" placeholder="price">
+        <input onkeyup='gettotal()' type="number" id="taxes" placeholder="taxes">
+        <input onkeyup='gettotal()' type="number" id="ads" placeholder="ads">
+        <input onkeyup='gettotal()' type="number" id="discount" placeholder="discount">
+        <small id="total"></small>
+      </div>
+      
+      <input placeholder="count" type="number" id="count"> 
+      <input placeholder="category" type="text" id="category"> 
+      <button class="create" id="submit">create</button>
+    </div> 
+    
+    <div class="outputs">
+      <div class="searchBlock">
+        <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+      </div>
+      <div class="btnsearch">
+        <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+        <button onclick="getSearchMood(this.id)" id="searchCategory">Search By  Category</button>
+      </div>
+      
+      <div id="deleteAll">
+        
+      </div>
+
+      <table>
+        <thead>
+          <td>ID</td>          
+          <td>TITLE</td>
+          <td>PRICE</td>
+          <td>TAXES</td>
+          <td>ADS</td>  
+          <td>DISCOUNT</td>
+          <td>TOTAL</td>
+          <td>CATEGORY</td>
+          <td>UPDATE</td>
+          <td>DELETE</td>
+        </thead>
+        <tbody id="tbody">
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
